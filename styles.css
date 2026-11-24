@@ -1,0 +1,676 @@
+/* ==========================================================================
+   1. VARIABLES Y RESET ACCESIBLE (WCAG 2.1 AA / AAA - LUZ DEL DÍA)
+   ========================================================================== */
+:root {
+  --azul-principal: #3E68C9;
+  --azul-oscuro: #1F3B80;
+  --amarillo-acento: #F4F74D;
+  --fondo-main: #E6E8E1;
+  --blanco: #FFFFFF;
+  --texto-oscuro: #0F172A;      /* Negro carbón de máximo contraste sobre blanco */
+  --texto-secundario: #1E293B;
+  --foco-color: #0F172A;
+  --foco-halo: #F4F74D;
+  --error-color: #991B1B;
+  --error-bg: #FEE2E2;
+  --exito-color: #166534;
+  --exito-bg: #DCFCE7;
+  --radio-card: 16px;
+  --radio-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--fondo-main);
+  color: var(--texto-oscuro);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. FOCO VISIBLE (>= 3PX) Y SKIP LINK
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--foco-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--foco-halo);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: var(--amarillo-acento);
+  color: var(--azul-oscuro);
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--azul-oscuro);
+  border-radius: 8px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN (CONTRASTE >= 4.5:1)
+   ========================================================================== */
+.site-header {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  padding: 0.9rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--azul-oscuro);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.header-container,
+.site-main,
+.footer-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.brand-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  min-height: 48px;
+  padding: 0 0.25rem;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.45);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.main-nav .nav-list {
+  flex: 1;
+}
+
+.whatsapp-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2.5px solid var(--blanco);
+  border-radius: 50%;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: var(--amarillo-acento);
+  border-color: var(--azul-oscuro);
+  transform: translateY(-1px);
+}
+
+.whatsapp-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(63%) saturate(2256%) hue-rotate(213deg) brightness(91%) contrast(96%);
+}
+
+.nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  color: var(--blanco);
+  border: 2.5px solid var(--blanco);
+  border-radius: var(--radio-pill);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.45);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--amarillo-acento);
+  color: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   4. MAIN Y SECCIÓN DE EVENTOS (BOCETO P1)
+   ========================================================================== */
+.site-main {
+  padding: 1.5rem 1rem 3rem;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--azul-oscuro);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 600;
+  color: var(--texto-secundario);
+  margin-top: 0.4rem;
+}
+
+.section-header {
+  margin-bottom: 1.15rem;
+}
+
+.section-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  font-weight: 800;
+  color: var(--azul-oscuro);
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-secundario);
+}
+
+/* Móvil: 1 columna | Tableta: 2 columnas | Escritorio: 3 columnas proporcionales */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+.event-card {
+  background-color: var(--blanco);
+  color: var(--texto-oscuro);
+  border-radius: var(--radio-card);
+  padding: 1.35rem;
+  border: 2.5px solid var(--azul-principal);
+  box-shadow: 0 5px 14px rgba(15, 23, 42, 0.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--azul-oscuro);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--texto-oscuro);
+  line-height: 1.3;
+}
+
+.badge-cupos {
+  background-color: #E0E7FF;
+  color: var(--texto-oscuro);
+  border: 2px solid var(--azul-oscuro);
+  border-radius: 10px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+
+.event-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-oscuro);
+}
+
+.event-meta li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  background-color: var(--amarillo-acento);
+  color: var(--azul-oscuro);
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: var(--radio-pill);
+  border: 2.5px solid var(--azul-oscuro);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+  transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--azul-oscuro);
+  color: var(--amarillo-acento);
+  border-color: var(--azul-oscuro);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   5. SECCIÓN DE INSCRIPCIÓN DINÁMICA SIN JS (BOCETO P2)
+   ========================================================================== */
+.registration-section {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 2.5px solid var(--azul-oscuro);
+  position: relative;
+}
+
+.target-anchor {
+  display: block;
+  position: relative;
+  top: -135px;
+  visibility: hidden;
+}
+
+.registration-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.selected-event-box {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  border-radius: var(--radio-card);
+  padding: 1.35rem;
+  border: 2.5px solid var(--azul-oscuro);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+}
+
+.selected-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.selected-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  color: var(--amarillo-acento);
+}
+
+.change-event-link {
+  color: var(--blanco);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.selected-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.4);
+}
+
+.selected-pill {
+  display: inline-block;
+  background-color: var(--blanco);
+  color: var(--texto-oscuro);
+  border: 2px solid var(--azul-oscuro);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radio-pill);
+  margin-bottom: 0.75rem;
+}
+
+.selected-meta-text {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+/* Cambio dinámico de evento mediante :target */
+.detail-2,
+.detail-3 {
+  display: none;
+}
+
+#evento-2:target ~ .registration-layout .selected-event-box .detail-1,
+#evento-3:target ~ .registration-layout .selected-event-box .detail-1 {
+  display: none;
+}
+
+#evento-2:target ~ .registration-layout .selected-event-box .detail-2 {
+  display: block;
+}
+
+#evento-3:target ~ .registration-layout .selected-event-box .detail-3 {
+  display: block;
+}
+
+/* Formulario profesional: Blanco + #3E68C9 + #F4F74D */
+.form-wrapper {
+  background-color: var(--blanco);
+  border-radius: var(--radio-card);
+  padding: 1.5rem 1.35rem;
+  border: 2.5px solid var(--azul-principal);
+  border-top: 8px solid var(--azul-oscuro);
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.14);
+}
+
+.registration-form {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--texto-oscuro);
+}
+
+.form-group input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--texto-oscuro);
+  background-color: var(--blanco);
+  border: 2.5px solid var(--azul-principal);
+  border-radius: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #475569;
+  font-weight: 500;
+}
+
+.form-group input:focus {
+  border-color: var(--azul-oscuro);
+  background-color: #FEFCE8;
+}
+
+/* Validación visual pura CSS */
+.validation-msg {
+  display: none;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+}
+
+.form-group input:user-invalid,
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: var(--error-color);
+  background-color: var(--error-bg);
+}
+
+.form-group input:user-invalid ~ .error-msg,
+.form-group input:invalid:not(:placeholder-shown) ~ .error-msg {
+  display: block;
+  color: var(--error-color);
+  background-color: var(--error-bg);
+  border: 1.5px solid var(--error-color);
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+  border-color: var(--exito-color);
+  background-color: var(--exito-bg);
+}
+
+.form-group input:valid:not(:placeholder-shown) ~ .valid-msg {
+  display: block;
+  color: var(--exito-color);
+  background-color: var(--exito-bg);
+  border: 1.5px solid var(--exito-color);
+}
+
+.btn-submit {
+  margin-top: 0.4rem;
+  width: 100%;
+  min-height: 52px;
+  background-color: var(--amarillo-acento);
+  color: var(--azul-oscuro);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border: 2.5px solid var(--azul-oscuro);
+  border-radius: var(--radio-pill);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--azul-oscuro);
+  color: var(--amarillo-acento);
+  transform: translateY(-1px);
+}
+
+/* Alerta de confirmación sin JS */
+.confirmation-alert {
+  display: none;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: var(--exito-bg);
+  border: 2.5px solid var(--exito-color);
+  border-radius: 12px;
+  color: var(--texto-oscuro);
+  text-align: center;
+}
+
+.confirmation-alert:target {
+  display: block;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  min-height: 48px;
+  padding: 0 1.35rem;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: var(--radio-pill);
+}
+
+/* ==========================================================================
+   6. FOOTER CON INFORMACIÓN COMPLETA
+   ========================================================================== */
+.site-footer {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  border-top: 3px solid var(--azul-principal);
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--amarillo-acento);
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-list a {
+  color: var(--blanco);
+  text-decoration: underline;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-list a:hover {
+  color: var(--amarillo-acento);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.88rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--blanco);
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES PARA TABLETA Y ESCRITORIO
+   ========================================================================== */
+@media (min-width: 640px) {
+  .brand-bar {
+    margin-bottom: 0;
+  }
+
+  /* PUCE a la izquierda y Navbar + WhatsApp a la derecha */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .main-nav {
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+
+  .main-nav .nav-list {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    padding: 0 1.25rem;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .registration-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .registration-form .btn-submit {
+    grid-column: 1 / -1;
+  }
+
+  .contact-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-main {
+    padding: 2rem 1.5rem 3.5rem;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+  }
+
+  .registration-layout {
+    grid-template-columns: 1fr 1.45fr;
+    gap: 1.75rem;
+  }
+}

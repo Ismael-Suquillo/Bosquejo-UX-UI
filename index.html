@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma accesible y responsiva para la inscripción rápida a eventos universitarios de la PUCE.">
+  <title>Eventos PUCE | Inscripción Rápida a Eventos Universitarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Enlace de salto para accesibilidad con teclado (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- CABECERA Y NAVEGACIÓN -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-bar">
+        <a href="#inicio" class="brand-link" aria-label="Inicio Eventos PUCE">
+          <img 
+            src="https://img.icons8.com/fluency-systems-filled/48/ffffff/university.png" 
+            alt="" 
+            width="30" 
+            height="30" 
+            class="brand-icon">
+          <span class="brand-text">PUCE</span>
+        </a>
+      </div>
+
+      <nav aria-label="Navegación principal" class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="#inscripcion" class="nav-link">Inscripción</a></li>
+        </ul>
+
+        <a 
+          href="https://wa.me/593993331110" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="whatsapp-btn" 
+          aria-label="Contactar soporte por WhatsApp">
+          <img 
+            src="https://img.icons8.com/ios-filled/48/ffffff/whatsapp--v1.png" 
+            alt="" 
+            width="24" 
+            height="24">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido-principal" class="site-main">
+
+    <!-- HERO / INICIO -->
+    <section id="inicio" class="hero-section" aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal" class="hero-title">Eventos PUCE</h1>
+      <p class="hero-subtitle">Elige tu evento y asegura tu cupo hoy.</p>
+    </section>
+
+    <!-- EVENTOS DISPONIBLES (Boceto P1) -->
+    <section id="eventos" class="events-section" aria-labelledby="titulo-eventos">
+      <header class="section-header">
+        <h2 id="titulo-eventos" class="section-title">Eventos Disponibles</h2>
+        <p class="section-subtitle">Próximos Eventos</p>
+      </header>
+
+      <div class="events-grid">
+        <!-- EVENTO 1 -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <h3 class="event-title">Feria de Emprendimiento</h3>
+            <span class="badge-cupos" aria-label="42 de 50 inscritos, 8 cupos disponibles">
+              <strong>42/50</strong> inscritos<br>
+              <span>8 cupos</span>
+            </span>
+          </div>
+
+          <ul class="event-meta">
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/calendar--v1.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <time datetime="2026-11-24T10:00">Mar 24 nov 2026 - 10:00</time>
+            </li>
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/marker.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <span>Auditorio Principal</span>
+            </li>
+          </ul>
+
+          <a href="#evento-1" class="btn-primary">Inscribirme</a>
+        </article>
+
+        <!-- EVENTO 2 -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <h3 class="event-title">Hackathon IA &amp; Web</h3>
+            <span class="badge-cupos" aria-label="28 de 40 inscritos, 12 cupos disponibles">
+              <strong>28/40</strong> inscritos<br>
+              <span>12 cupos</span>
+            </span>
+          </div>
+
+          <ul class="event-meta">
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/calendar--v1.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <time datetime="2026-11-26T14:30">Jue 26 nov 2026 - 14:30</time>
+            </li>
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/marker.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <span>Laboratorio de Sistemas, Torre 2</span>
+            </li>
+          </ul>
+
+          <a href="#evento-2" class="btn-primary">Inscribirme</a>
+        </article>
+
+        <!-- EVENTO 3 -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <h3 class="event-title">Foro de Innovación Sostenible</h3>
+            <span class="badge-cupos" aria-label="85 de 90 inscritos, 5 cupos disponibles">
+              <strong>85/90</strong> inscritos<br>
+              <span>5 cupos</span>
+            </span>
+          </div>
+
+          <ul class="event-meta">
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/calendar--v1.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <time datetime="2026-11-28T09:00">Sáb 28 nov 2026 - 09:00</time>
+            </li>
+            <li>
+              <img 
+                src="https://img.icons8.com/ios-filled/32/0F172A/marker.png" 
+                alt="" 
+                width="18" 
+                height="18">
+              <span>Centro Cultural PUCE</span>
+            </li>
+          </ul>
+
+          <a href="#evento-3" class="btn-primary">Inscribirme</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INSCRIPCIÓN DINÁMICA SIN JS (Boceto P2) -->
+    <section id="inscripcion" class="registration-section" aria-labelledby="titulo-inscripcion">
+
+      <!-- Anclas invisibles para controlar :target en CSS puro -->
+      <span id="evento-1" class="target-anchor" tabindex="-1"></span>
+      <span id="evento-2" class="target-anchor" tabindex="-1"></span>
+      <span id="evento-3" class="target-anchor" tabindex="-1"></span>
+
+      <div class="registration-layout">
+        <!-- Tarjeta dinámica: Evento Seleccionado -->
+        <aside class="selected-event-box" role="region" aria-live="polite" aria-label="Resumen del evento seleccionado">
+          <div class="selected-header">
+            <span class="selected-label">Evento seleccionado</span>
+            <a href="#eventos" class="change-event-link">Cambiar evento</a>
+          </div>
+
+          <!-- Estado por defecto / Evento 1 -->
+          <div class="selected-detail detail-1">
+            <h3 class="selected-title">Feria de Emprendimiento</h3>
+            <p class="selected-pill">42/50 inscritos &bull; 8 cupos</p>
+            <p class="selected-meta-text">Mar 24 nov 2026 - 10:00 &bull; Auditorio Principal</p>
+          </div>
+
+          <!-- Estado Evento 2 -->
+          <div class="selected-detail detail-2">
+            <h3 class="selected-title">Hackathon IA &amp; Web</h3>
+            <p class="selected-pill">28/40 inscritos &bull; 12 cupos</p>
+            <p class="selected-meta-text">Jue 26 nov 2026 - 14:30 &bull; Laboratorio de Sistemas, Torre 2</p>
+          </div>
+
+          <!-- Estado Evento 3 -->
+          <div class="selected-detail detail-3">
+            <h3 class="selected-title">Foro de Innovación Sostenible</h3>
+            <p class="selected-pill">85/90 inscritos &bull; 5 cupos</p>
+            <p class="selected-meta-text">Sáb 28 nov 2026 - 09:00 &bull; Centro Cultural PUCE</p>
+          </div>
+        </aside>
+
+        <!-- Formulario optimizado (4 campos esenciales sin fricción) -->
+        <div class="form-wrapper">
+          <h2 id="titulo-inscripcion" class="section-title">Inscripción</h2>
+          <p class="section-subtitle">Completa tus datos para registrar tu asistencia.</p>
+
+          <form action="#confirmacion" method="get" class="registration-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                placeholder="Ej. María Torres" 
+                autocomplete="name" 
+                minlength="3" 
+                required>
+              <span class="validation-msg error-msg">Ingresa al menos 3 caracteres para tu nombre.</span>
+              <span class="validation-msg valid-msg">Nombre válido.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input 
+                type="email" 
+                id="correo" 
+                name="correo" 
+                placeholder="usuario@puce.edu.ec" 
+                autocomplete="email" 
+                required>
+              <span class="validation-msg error-msg">Ingresa un correo válido (ej. usuario@puce.edu.ec).</span>
+              <span class="validation-msg valid-msg">Correo válido.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="cedula">Cédula</label>
+              <input 
+                type="text" 
+                id="cedula" 
+                name="cedula" 
+                placeholder="10 dígitos" 
+                inputmode="numeric" 
+                pattern="[0-9]{10}" 
+                minlength="10" 
+                maxlength="10" 
+                required>
+              <span class="validation-msg error-msg">La cédula debe contener exactamente 10 dígitos numéricos.</span>
+              <span class="validation-msg valid-msg">Cédula con formato correcto.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="celular">Celular</label>
+              <input 
+                type="tel" 
+                id="celular" 
+                name="celular" 
+                placeholder="09XX XXX XXX" 
+                inputmode="tel" 
+                autocomplete="tel" 
+                pattern="09[0-9]{8}" 
+                maxlength="10" 
+                required>
+              <span class="validation-msg error-msg">Ingresa un celular de 10 dígitos iniciado en 09 (ej. 0993331110).</span>
+              <span class="validation-msg valid-msg">Número celular válido.</span>
+            </div>
+
+            <button type="submit" class="btn-submit">Confirmar inscripción</button>
+          </form>
+
+          <!-- Confirmación sin JS -->
+          <div id="confirmacion" class="confirmation-alert" role="status">
+            <p><strong>¡Inscripción registrada!</strong> Se ha generado tu comprobante de asistencia para el evento seleccionado.</p>
+            <a href="#inicio" class="btn-secondary">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA CON INFORMACIÓN COMPLETA -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <h2 class="footer-title">Contactos</h2>
+      <ul class="contact-list">
+        <li>
+          <img 
+            src="https://img.icons8.com/ios-filled/32/ffffff/new-post.png" 
+            alt="" 
+            width="18" 
+            height="18">
+          <a href="mailto:eventos@puce.edu.ec">eventos@puce.edu.ec</a>
+        </li>
+        <li>
+          <img 
+            src="https://img.icons8.com/ios-filled/32/ffffff/phone.png" 
+            alt="" 
+            width="18" 
+            height="18">
+          <a href="tel:+593993331110">0993331110</a>
+        </li>
+        <li>
+          <img 
+            src="https://img.icons8.com/ios-filled/32/ffffff/marker.png" 
+            alt="" 
+            width="18" 
+            height="18">
+          <span>Av. 12 de Octubre y Vicente Ramón Roca, Quito.</span>
+        </li>
+      </ul>
+      <p class="copyright">&copy; 2026 PUCE. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
